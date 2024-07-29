@@ -17,18 +17,40 @@ header {
     padding-top: 30px;
     min-height: 70px;
     border-bottom: #77aaff 3px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header a, header h1 {
+header h1 {
+    margin: 0;
+}
+
+header nav {
+    position: relative;
+}
+
+header .nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+header .nav-links li {
+    margin: 0 10px;
+}
+
+header .nav-links a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 16px;
 }
 
-header a {
-    float: right;
-    margin-top: -50px;
+header .icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .main {
@@ -68,4 +90,17 @@ h2 {
     padding: 5px 10px;
     margin: 5px;
     border-radius: 5px;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+    header .nav-links {
+        display: none;
+        flex-direction: column; 
+        width: 100%;
+    }
+
+    header .icon {
+        display: block;
+    }
 }
